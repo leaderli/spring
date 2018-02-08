@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatistest.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.CategoryMapper">
+    <insert id="insert" parameterType="mybatis.Category">
+        <selectKey keyProperty="count" resultType="int" order="BEFORE">
+            SELECT count(*) FROM CATEGORY WHERE ID = #{id}
+        </selectKey>
+        <if test="count ==0">
+            INSERT INTO CATEGORY VALUES (#{id},#{name},#{description})
+        </if>
+        <if test="count>0">
+            UPDATE CATEGORY set name =#{name},description =#{description} WHERE id = #{id}
+        </if>
+    </insert>
+</mapper>
