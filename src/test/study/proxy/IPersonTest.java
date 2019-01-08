@@ -7,8 +7,9 @@ import study.proxy.impl.PersonImpl;
  * Created by li on 1/11/18.
  */
 public class IPersonTest {
+    public static final String HELLO="hello";
     @Test
-    public void say() throws Exception {
+    public void say() {
         IPerson iPerson = new PersonProxy(new PersonImpl());
         iPerson.say();
     }

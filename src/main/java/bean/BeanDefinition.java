@@ -1,8 +1,13 @@
 package bean;
 
+import org.springframework.context.annotation.Scope;
+
+import javax.swing.*;
+
 /**
  * Created by li on 1/19/18.
  */
+@Scope()
 public class BeanDefinition {
     public static final int SCOPE_SINGLETON = 0;
     public static final int SCOPE_PROTOTYPE= 1;

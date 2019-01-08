@@ -26,7 +26,7 @@ public class LogTest {
         System.out.println("pong");
     }
 
-    public void LogTest() throws IOException {
+    public void Log() throws IOException {
         new BufferedWriter(new FileWriter("1.txt"));
 
     }

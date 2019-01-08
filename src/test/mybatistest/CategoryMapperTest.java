@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration("classpath:spring-mybatis.xml")
 public class CategoryMapperTest {
     @Autowired
-    CategoryImpl catagoryMapper;
+    CategoryImpl categoryMapper;
 
     @Autowired
     Category category;
@@ -27,6 +27,6 @@ public class CategoryMapperTest {
         category.setName("10086");
         category.setDescription("1111111");
         System.out.println("class "+ category.getClass());
-        catagoryMapper.insert(category);
+        categoryMapper.insert(category);
     }
 }
